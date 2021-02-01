@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+    <div style="height:20px; width: 960px; background: green;" onclick="unityInstance.SetFullscreen(1)"><b>Click here to make it full screen.</b></div>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=720 height=405></canvas>
       <div id="unity-loading-bar">
@@ -89,9 +90,9 @@
         // config.devicePixelRatio = 1;
 
         canvas.style.width = window.innerWidth + 'px';
-        canvas.style.height = window.innerHeight + 'px';
+        canvas.style.height = window.innerWidth/(16/9) + 'px';
 
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
+       // unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
